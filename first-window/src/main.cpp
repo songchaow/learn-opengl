@@ -113,13 +113,16 @@ int main()
       glDrawArrays(GL_TRIANGLES, 0, 6);
       glfwSwapBuffers(window);
       // draw2
+      glBindVertexArray(VAO2);
       glBindBuffer(GL_ARRAY_BUFFER, VBO2);
       glBufferData(GL_ARRAY_BUFFER, sizeof(vertices2), vertices2, GL_STATIC_DRAW);
       glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+      glEnableVertexAttribArray(0);
       glDrawArrays(GL_TRIANGLES, 0, 6);
       glfwSwapBuffers(window);
       // switch VBO
-      glBindBuffer(GL_ARRAY_BUFFER, VBO);
+      glBindVertexArray(VAO);
+      
       glDrawArrays(GL_TRIANGLES, 0, 6);
       glfwSwapBuffers(window);
       while (!glfwWindowShouldClose(window))
