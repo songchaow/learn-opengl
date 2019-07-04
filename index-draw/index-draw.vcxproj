@@ -122,6 +122,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\shader.cpp" />
     <ClCompile Include="src\glad.c" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
@@ -130,7 +131,7 @@
     <None Include="src\vertex.glsl" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\shader.h" />
+    <ClInclude Include="..\common\include\shader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
